@@ -89,6 +89,7 @@ public class MyntraSearch {
 			// } after clicking second page, it is not going to the third page. Moving to the last page. Not sure why
 
 		}
+	
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", moreBrand);
 		driver.findElement(By.xpath("//a[text()='1']")).click();
 		Thread.sleep(2000);
