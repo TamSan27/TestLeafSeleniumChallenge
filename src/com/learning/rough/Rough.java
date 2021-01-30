@@ -16,7 +16,7 @@ public class Rough {
 		WebDriver driver ;
 		// TODO Auto-generated method stub
 		
-		String initialResultsCount,totalPages;
+		String initialResultsCount,totalPagess;
 		WebElement searchBar,priceFilter,pageCount,nextButton,firstProduct;
 		int totalPageCount;
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\Drivers\\chromedriver.exe");
