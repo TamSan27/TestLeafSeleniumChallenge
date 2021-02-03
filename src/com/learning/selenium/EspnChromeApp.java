@@ -1,11 +1,14 @@
 package com.learning.selenium;
 
 import java.io.File;
+import org.openqa.selenium.TakesScreenshot;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -30,7 +33,7 @@ public class EspnChromeApp {
 		driver.findElement(By.xpath("//span[text()='BBL']")).click();
 		//driver.manage().window().maximize();
 		
-		//  This is not working , casuing java.lang.ClassNotFoundException error message
+		
 		  Screenshot screenshot=new
 		  AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000)).
 		  takeScreenshot(driver); try { ImageIO.write(screenshot.getImage(),"JPG",new
