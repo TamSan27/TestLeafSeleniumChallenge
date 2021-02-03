@@ -20,6 +20,7 @@ public class Screenshots {
 
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.ajio.com/");
+		driver.manage().window().maximize();
 
 		File f = new File("C:\\Users\\gowthaman\\git\\TestLeafSeleniumChallenge\\Output\\screenshot.jpg");
 
@@ -33,9 +34,13 @@ public class Screenshots {
 			e.delete();
 		}
 		File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(screenshot,
-				new File("C:\\Users\\gowthaman\\git\\TestLeafSeleniumChallenge\\Output\\screenshot.jpg"));
-
+		/*
+		 * FileUtils.copyFile(screenshot, new File(
+		 * "C:\\Users\\gowthaman\\git\\TestLeafSeleniumChallenge\\Output\\screenshot.jpg"
+		 * ));
+		 */
+		FileUtils.copyFile(screenshot,f);
+	
 	}
 
 }
